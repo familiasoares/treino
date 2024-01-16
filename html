@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Diário de Saúde e Treino</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <h2>Registro Diário de Saúde e Treino</h2>
+
+        <form>
+            <label for="data">Data:</label>
+            <input type="date" id="data" name="data" min="2024-01-01" max="2024-12-31" required>
+
+            <label for="peso">Peso Atual (kg):</label>
+            <input type="number" id="peso" name="peso" step="0.1" required>
+
+            <label for="pressaoSistolica">Pressão Sistólica:</label>
+            <input type="number" id="pressaoSistolica" name="pressaoSistolica" required>
+
+            <label for="pressaoDiastolica">Pressão Diastólica:</label>
+            <input type="number" id="pressaoDiastolica" name="pressaoDiastolica" required>
+
+            <label for="frequenciaCardiaca">Frequência Cardíaca:</label>
+            <input type="number" id="frequenciaCardiaca" name="frequenciaCardiaca" required>
+
+            <label for="tipoTreino">Tipo de Treino:</label>
+            <select id="tipoTreino" name="tipoTreino" required>
+                <option value="1">Treino 1</option>
+                <option value="2">Treino 2</option>
+                <option value="3">Treino 3</option>
+                <!-- Adicione mais opções conforme necessário -->
+            </select>
+
+            <label for="caloriasGastas">Calorias Gastas:</label>
+            <input type="number" id="caloriasGastas" name="caloriasGastas" required>
+
+            <label for="tempoTreino">Tempo de Treino (minutos):</label>
+            <input type="number" id="tempoTreino" name="tempoTreino" required>
+
+            <button type="button" onclick="adicionarRegistro()">Adicionar Registro</button>
+        </form>
+
+        <h3>Histórico de Registros</h3>
+        <!-- Tabela para exibir o histórico de registros -->
+        <table id="tabelaRegistros">
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Peso (kg)</th>
+                    <th>Pressão Sistólica</th>
+                    <th>Pressão Diastólica</th>
+                    <th>Frequência Cardíaca</th>
+                    <th>Tipo de Treino</th>
+                    <th>Calorias Gastas</th>
+                    <th>Tempo de Treino (min)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- O histórico de registros será adicionado aqui -->
+            </tbody>
+        </table>
+
+        <div id="footer">
+            Página estilizada por [Seu Nome/Autoria]
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
